@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) in pages" :key="index">
     <div class="icons-content" v-for="i in page" :key="i.id"><img :src="i.url"/><p class="fonts">{{i.names}}</p></div>
       </swiper-slide>
@@ -24,7 +24,10 @@ export default {
         {id: '8', url: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png', names: '文化古迹'},
         {id: '9', url: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png', names: '动物园'},
         {id: '10', url: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png', names: '全部玩乐 '}
-      ]
+      ],
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
@@ -49,6 +52,7 @@ export default {
     width: 100%
     height: 0
     padding-bottom: 50%
+    margin-top:.2rem
     .icons-content
       position: relative
       width: 25%
