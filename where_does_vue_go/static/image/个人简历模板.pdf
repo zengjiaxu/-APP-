@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)file:///I:/Sublime%20Text%203/a.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=gbk//IGNORE"><title>个人简历模板</title><style>
+                    html,body,p,ul,table,tr,td{margin:0;padding:0}
+                    a{text-decoration:none}
+                    li{list-style:none}
+                    img{border:0 none}
+                    body{font-family:'Microsoft YaHei';font-size:14px}
+                    div,span,a{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
+                    table{border-collapse:collapse;border-spacing:0;border:0 none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box}
+                    td{text-align:left}
+                    .resume_clearfix{display:block;overflow:hidden;clear:both}
+                    .all_wrap{width:693px}
+                    .at{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+                    .top_info{padding-left:10px;}
+                    .page{width:693px;margin:0 auto;padding:3px;background-color:#fff}
+                    .gray{color:#919191 !important}
+                    .l_green{color:#6d8194 !important}
+                    .blue{color:#4567af !important}
+                    .yellow{color:#fae001 !important}
+                    .y_green{color:#a4b049 !important}
+                    .s_blue{color:#00a0e9 !important}
+                    .orange{color:#f39800 !important}
+                    .resume_boxt3{width:693px;background-color:#d7dfe7;border:15px solid #efefef}
+                    .head_tr{vertical-align:top}
+                    .mes_t3{margin:126px 15px 20px 15px}
+                    .per_list3{line-height:22px;font-size:12px;color:#d8dcde}
+                    .people{width:264px;margin-top:25px}
+                    .peo_head{text-align:center;padding-bottom:10px}
+                    .email_t3{max-width:146px;word-wrap:break-word;color:#919191}
+                    .name_t3{height:40px;line-height:40px;font-size:18px;color:#000;text-align:center}
+                    .divide{width:693px;text-align:center;background-color:#efefef}
+                    .divide img{width:662px;height:9px;border:0 none}
+                    .top_line{text-align:center;}
+                    .mes_box3{width:693px;background-color:#efefef;border-left:15px solid #efefef;border-right:15px solid #efefef}
+                    .bar_l{width:370px;vertical-align:top;padding:12px 0px 20px 0px} 
+                    .bar_r{width:280px;vertical-align:top;padding-top:12px}
+                    .per_title3{margin-left:9px}
+                    .title_icon3{*width:31px;*height:*31px;padding-right:12px;border:0 none}
+                    .title_icon3 img{margin-top:5px}
+                    .info_type3{margin:-4px 0 0 23px;*margin:-1px 0 0 23px;*border-left:1px solid #448aca}
+                    .info_type4{margin-left:23px;*border-left:1px solid #448aca}
+                    .info_list3{line-height:22px;font-size:12px;color:#000;border-left:1px solid #448aca}
+                    .info_list_com{line-height:22px;font-size:12px;color:#000;margin-top:20px;border-left:1px solid #448aca}
+                    .title_txt3{height:27px;line-height:27px;font-weight:bold;color:#000;text-align:left}
+                    .exp3{width:140px;vertical-align:top;padding-right:10px}
+                    .edu3{width:64px;vertical-align:top;text-align:right}
+                    .edu4{width:64px;vertical-align:top;text-align:right}
+                    .limit3{width:268px}
+                    .reu3{width:100px;vertical-align:top;}
+                    .tec{width:104px}
+                    .tec a{display:block;width:104px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                    .tec span{display:block;width:104px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                    .edu5{width:64px;vertical-align:top;text-align:right}
+                    .exp3{width:102px}
+                    .exp3 span{display:block;width:102px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                    .exp3 a{display:block;width:102px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                    .time3{width:106px; vertical-align:top;}
+                    .con3{text-indent:28px}
+                    .english{width:67px;text-align:right;vertical-align:top;}
+                    .con_detail{width:304px;line-height:22px;font-size:12px;color:#919191;padding-left:28px}
+                    .regular_t3{max-width:160px}
+                    .pl{width:100px;padding-left:27px}
+                    .com_t3{width:150px}
+                    .introduce{width:248px;line-height:22px;font-size:12px;color:#919191;padding-left:28px}
+                    .edu_t3{width:113px;vertical-align:top;padding-left:28px}
+                    .limit_t3{width:82px}
+                    .con_t3{position:relative;width:176px;height:16px;*height:15px;top:2px;background-color:#448aca;border:1px solid #accbe7}
+                    .rank_t3{position:absolute;top:0;left:0;width:70%;height:16px;line-height:16px;text-indent:6px;background-color:#accbe7;color:#919191}
+                    .cer{width:180px;padding-left:28px}
+                    .cer span{display:block;width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                    .pofi{width:106px;text-align:right;vertical-align:top}
+                </style></head><body><div xmlns="" class="page"><div class="all_wrap">
+<table class="resume_boxt3">
+<tbody><tr class="head_tr">
+<td width="230"><table class="mes_t3"><tbody>
+<tr class="per_list3">
+<td class="title_icon" valign="middle"><img src="./个人简历模板_files/icon1_type3.png" alt="工作经验" width="17" height="16"></td>
+<td class="limit1"><span class="gray top_info">两年以上工作经验</span></td>
+</tr>
+<tr class="per_list3">
+<td class="title_icon" valign="middle"><img src="./个人简历模板_files/icon2_type3.png" alt="年龄" width="17" height="16"></td>
+<td class="limit1"><span class="gray top_info">28岁</span></td>
+</tr>
+<tr class="per_list3">
+<td class="title_icon" valign="middle"><img src="./个人简历模板_files/icon3_type3.png" alt="工作地点" width="17" height="16"></td>
+<td class="limit1"><span class="gray top_info">北京</span></td>
+</tr>
+<tr class="per_list3">
+<td class="title_icon" valign="middle"><img src="./个人简历模板_files/icon4_type3.png" alt="电话号码" width="17" height="16"></td>
+<td class="limit1"><span class="gray top_info">152******(手机)
+                                                    </span></td>
+</tr>
+<tr class="per_list3">
+<td class="title_icon" valign="middle"><img src="./个人简历模板_files/icon5_type3.png" alt="邮箱" width="17" height="16"></td>
+<td class="limit1"><span class="gray top_info">hanzheng@51job.com</span></td>
+</tr>
+</tbody></table></td>
+<td><table class="people">
+<tbody><tr><td class="peo_head"><img src="./个人简历模板_files/head.png" alt="简历照片" width="105" height="148"></td></tr>
+<tr><td><p class="name_t3">韩正</p></td></tr>
+<tr><td class="posi top_line"><a class="s_blue" href="https://jobs.51job.com/qianduankaifa/" target="_blank">Web前端开发</a></td></tr>
+</tbody></table></td>
+</tr>
+<tr class="distance_b"></tr>
+</tbody></table>
+<table class="divide"><tbody><tr><td class="top_line"><img src="./个人简历模板_files/divide_type3.png"></td></tr></tbody></table>
+<table class="mes_box3"><tbody><tr>
+<td class="bar_l">
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon6_type3.png" alt="最近工作" width="31" height="31"></td>
+<td><p class="title_txt3">最近工作</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3">
+<td class="edu3"><span>公司：</span></td>
+<td class="reu3"><span class="gray" title="XX有限公司">XX有限公司</span></td>
+<td class="edu3"><span>行业：</span></td>
+<td class="exp3"><a class="s_blue" title="互联网/电子商务" href="https://jobs.51job.com/hy32/" target="_blank">互联网/电子商务</a></td>
+</tr></tbody></table>
+<table class="info_type4"><tbody><tr class="info_list3">
+<td class="edu4"><span>职位：</span></td>
+<td class="limit3"><span class="gray">Web前端开发</span></td>
+</tr></tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon7_type3.png" alt="最高学历" width="31" height="31"></td>
+<td><p class="title_txt3">最高学历</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3">
+<td class="edu4"><span>学校：</span></td>
+<td class="limit3"><a class="s_blue" href="https://jianli.51job.com/xiaohui/322.html" target="_blank">清华大学</a></td>
+</tr></tbody></table>
+<table class="info_type4"><tbody><tr class="info_list3">
+<td class="edu5"><span>学历：</span></td>
+<td class="reu3"><span class="gray">本科</span></td>
+<td class="edu4"><span>专业：</span></td>
+<td class="tec"><a class="s_blue" title="电子信息工程" href="https://jianli.51job.com/zy3605/" target="_blank">电子信息工程</a></td>
+</tr></tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon8_type3.png" alt="工作经验" width="31" height="31"></td>
+<td><p class="title_txt3">工作经验</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3">
+<td class="edu4"><span>公司：</span></td>
+<td class="exp3"><span class="gray" title="XX有限公司">XX有限公司</span></td>
+<td class="time3"><span class="gray">2014/6--2015/1</span></td>
+</tr></tbody></table>
+<table class="info_type4"><tbody>
+<tr class="info_list3">
+<td class="edu4"><span>职位：</span></td>
+<td class="limit3"><span class="gray">Web前端开发</span></td>
+</tr>
+<tr class="info_list3">
+<td class="edu4"><span>行业：</span></td>
+<td class="limit3"><a class="s_blue" href="https://jobs.51job.com/hy32/" target="_blank">互联网/电子商务</a></td>
+</tr>
+<tr class="info_list3">
+<td class="edu4"><span>部门：</span></td>
+<td class="limit3"><span class="gray">开发部</span></td>
+</tr>
+</tbody></table>
+<table class="info_type4"><tbody>
+<tr class="info_list3"><td class="con3"><span>工作内容：</span></td></tr>
+<tr class="info_list3"><td class="con_detail">1.与设计师和后台程序配合，高效率高质量地完成页面的实现工作。2.任前端开发小组长，带领团队成员高效的完成工作。3.负责公司国际机票后端php的开发及网站维护，与接口组配合完成接口调用。</td></tr>
+</tbody></table>
+<table class="info_type4"><tbody><tr class="info_list3"><td height="20"></td></tr></tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon9_type3.png" alt="教育经历" width="31" height="31"></td>
+<td><p class="title_txt3">教育经历</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3">
+<td class="edu4"><span>学校：</span></td>
+<td class="exp3"><a class="s_blue" title="清华大学" href="https://jianli.51job.com/xiaohui/322.html" target="_blank">清华大学</a></td>
+<td class="time3"><span class="gray">2009/9--2013/6</span></td>
+</tr></tbody></table>
+<table class="info_type4"><tbody><tr class="info_list3">
+<td class="edu4"><span>专业：</span></td>
+<td class="regular_t3"><a class="s_blue" href="https://jianli.51job.com/zy3605/" target="_blank">电子信息工程</a></td>
+<td class="pl"><span class="gray">本科</span></td>
+</tr></tbody></table>
+</td>
+<td class="bar_r">
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon10_type3.png" alt="自我评价" width="31" height="31"></td>
+<td><p class="title_txt3">自我评价</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3"><td class="introduce">本人思想端正、积极向上、适应力强，有管理、组织能力。工作中能吃苦肯钻研，能承受较强工作压力，注重长期稳定的发展机会、谈判及沟通协调能力强。强烈的工作责任心及优秀的问题分析与处理能力，强烈的团队协作意识、结果导向及成本控制意识强，并且从事的每项工作都能很好的完成。</td></tr></tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon11_type3.png" alt="求职意向" width="31" height="31"></td>
+<td><p class="title_txt3">求职意向</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody>
+<tr class="info_list3">
+<td class="edu_t3"><span>到岗时间：</span></td>
+<td width="limit_t3"><span class="gray">一个月之内</span></td>
+</tr>
+<tr class="info_list3">
+<td class="edu_t3"><span>工作性质：</span></td>
+<td class="limit_t3"><span class="gray">全职</span></td>
+</tr>
+<tr class="info_list3">
+<td class="edu_t3"><span>希望行业：</span></td>
+<td class="limit3"><a class="s_blue" href="https://jobs.51job.com/hy32/" target="_blank">互联网/电子商务</a></td>
+</tr>
+<tr class="info_list3">
+<td class="edu_t3"><span>目标地点：</span></td>
+<td class="limit_t3"><span class="gray">北京</span></td>
+</tr>
+<tr class="info_list3">
+<td class="edu_t3"><span>期望月薪：</span></td>
+<td class="limit_t3"><span class="gray">面议/月</span></td>
+</tr>
+<tr class="info_list3">
+<td class="edu_t3"><span>目标职能：</span></td>
+<td class="limit_t3"><a class="s_blue" href="https://jobs.51job.com/qianduankaifa/" target="_blank">Web前端开发</a></td>
+</tr>
+</tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon12_type3.png" alt="语言能力" width="31" height="31"></td>
+<td><p class="title_txt3">语言能力</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody>
+<tr class="info_list3">
+<td class="english"><span>英语：</span></td>
+<td class="limit2"><p class="con_t3"><span class="rank_t3 ">良好</span></p></td>
+</tr>
+<tr class="info_list3">
+<td class="english"><span>听说：</span></td>
+<td class="limit2"><p class="con_t3"><span class="rank_t3">良好</span></p></td>
+</tr>
+<tr class="info_list3">
+<td class="english"><span>读写：</span></td>
+<td class="limit2"><p class="con_t3"><span class="rank_t3">良好</span></p></td>
+</tr>
+</tbody></table>
+<table class="per_title3"><tbody><tr>
+<td class="title_icon3" valign="bottom"><img src="./个人简历模板_files/icon13_type3.png" alt="证书" width="31" height="31"></td>
+<td><p class="title_txt3">证书</p></td>
+</tr></tbody></table>
+<table class="info_type3"><tbody><tr class="info_list3">
+<td class="cer"><span class="gray" title="大学英语四级">大学英语四级</span></td>
+<td class="pofi"><span class="gray">2010/12</span></td>
+</tr></tbody></table>
+</td>
+</tr></tbody></table>
+</div></div>
+</body></html>

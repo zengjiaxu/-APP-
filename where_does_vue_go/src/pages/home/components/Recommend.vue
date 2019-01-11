@@ -48,7 +48,6 @@ export default {
 <style lang="stylus" scoped>
   .recommend-content
     width: 100%
-    height: 1rem
     .recommend-content-img-info
       width: 2.3rem
       height: 2.3rem
