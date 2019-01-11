@@ -41,8 +41,8 @@ export default {
       font-size .32rem
       background #cccccc
     .recommend-content-img-info
-      width: 100%
-      height: 2.3rem
+      width: 100vw
+      height: 37.8vw
       .recommend-content-img
         width: 100%
         height: 3rem
