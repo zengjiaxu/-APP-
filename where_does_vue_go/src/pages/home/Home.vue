@@ -6,7 +6,6 @@
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend></home-weekend>
   </div>
-
 </template>
 
 <script>
@@ -35,7 +34,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+      axios.get('/static/mock/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       res = res.data

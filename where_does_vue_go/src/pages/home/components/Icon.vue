@@ -42,8 +42,7 @@ export default {
   .icons
     width: 100vw
     height: 0
-    padding-bottom: 50vw
-    margin-top:.4rem
+    height : 50vw
     .icons-content
       position: relative
       width: 25%
