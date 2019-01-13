@@ -7,71 +7,20 @@
           <div class="button-wrapper">
             <div class="button">北京</div>
           </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
         </div>
       </div>
  <div class="area">
       <div class="title border-tb">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
- <div class="area">
-      <div class="title border-tb">A</div>
+ <div class="area" v-for="(item,k) in cities" :key="k" :ref="k">
+      <div class="title border-tb">{{k}}</div>
       <ul class="item-list">
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-      </ul>
-      </div>
- <div class="area">
-      <div class="title border-tb">B</div>
-      <ul class="item-list">
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-      </ul>
-      </div>
- <div class="area">
-      <div class="title border-tb">C</div>
-      <ul class="item-list">
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-      </ul>
-      </div>
- <div class="area">
-      <div class="title border-tb">D</div>
-      <ul class="item-list">
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
-        <li class="item">a</li>
+        <li class="item" v-for="i of item" :key="i.id">{{i.name}}</li>
       </ul>
       </div>
       </div>
@@ -82,8 +31,20 @@
 import Bscroll from 'better-scroll'
 export default {
   name: 'list',
+  props: {
+    hotCities: Array,
+    cities: Object,
+    res: String
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    res () {
+      if (this.res) {
+        this.scroll.scrollToElement(this.$refs[this.res][0])// 点击字母跳到相应的位置
+      }
+    }
   }
 }
 </script>
