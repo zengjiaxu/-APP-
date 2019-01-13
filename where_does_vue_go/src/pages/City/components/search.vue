@@ -1,11 +1,49 @@
 <template>
+   <div>
    <div class="search-city">
-      <input type="text" placeholder="输入城市名或拼音">
+      <input type="text" placeholder="输入城市名或拼音" v-model="msg">
+   </div>
+   <div class="search-content" ref="search" v-show="msg">
+      <ul>
+         <li class="l" v-for="item of list" :key="item.id">{{item.name}}</li>
+         <li class="l" v-show="hasLen">未找到匹配的数据</li>
+      </ul>
+   </div>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
+import BScroll from 'better-scroll'
 export default {
+  data () {
+    return {
+      msg: '',
+      list: []
+    }
+  },
+  props: {
+    cities: Object
+  },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.search)
+  },
+  computed: {
+    hasLen () {
+      return this.msg && this.list.length === 0
+    }
+  },
+  watch: {
+    msg () {
+      this.list = []
+      for (let i in this.cities) {
+        this.cities[i].forEach((val) => {
+          if (val.spell.indexOf(this.msg) !== -1 || val.name.indexOf(this.msg) !== -1) {
+            this.list.push(val)
+          }
+        })
+      }
+    }
+  }
 }
 </script>
 
@@ -27,4 +65,20 @@ export default {
     float left
     color #666
     padding 0 .1rem
+.search-content
+   background blue
+   position absolute
+   left 0
+   right 0
+   bottom 0
+   top 79px
+   overflow hidden
+   z-index 1
+   font-size .32rem
+   background #eee
+   .l
+     box-sizing border-box
+     border 1px #eee solid
+     color #666
+     background #fff
 </style>
