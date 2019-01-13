@@ -18,7 +18,8 @@ export default {
   data () {
     return {
       msg: '',
-      list: []
+      list: [],
+      timer: null
     }
   },
   props: {
@@ -34,14 +35,19 @@ export default {
   },
   watch: {
     msg () {
-      this.list = []
-      for (let i in this.cities) {
-        this.cities[i].forEach((val) => {
-          if (val.spell.indexOf(this.msg) !== -1 || val.name.indexOf(this.msg) !== -1) {
-            this.list.push(val)
-          }
-        })
+      if (this.timer) {
+        clearTimeout(this.timer)
       }
+      this.timer = setTimeout(() => {
+        this.list = []
+        for (let i in this.cities) {
+          this.cities[i].forEach((val) => {
+            if (val.spell.indexOf(this.msg) !== -1 || val.name.indexOf(this.msg) !== -1) {
+              this.list.push(val)
+            }
+          })
+        }
+      }, 16)
     }
   }
 }
