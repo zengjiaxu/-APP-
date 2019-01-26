@@ -5,7 +5,7 @@
    </div>
    <div class="search-content" ref="search" v-show="msg">
       <ul>
-         <li class="l" v-for="item of list" :key="item.id">{{item.name}}</li>
+         <li class="l" v-for="item of list" :key="item.id" @click="handleClickCity(item.name)">{{item.name}}</li>
          <li class="l" v-show="hasLen">未找到匹配的数据</li>
       </ul>
    </div>
@@ -24,6 +24,12 @@ export default {
   },
   props: {
     cities: Object
+  },
+  methods: {
+    handleClickCity (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
+    }
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.search)
