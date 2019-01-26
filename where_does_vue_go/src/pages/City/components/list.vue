@@ -5,7 +5,7 @@
       <div class="title border-tb">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{this.$store.state.city}}</div>
+            <div class="button">{{this.currentCity}}</div>
           </div>
         </div>
       </div>
@@ -29,6 +29,7 @@
 
 <script type="text/ecmascript-6">
 import Bscroll from 'better-scroll'
+import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'list',
   props: {
@@ -41,9 +42,10 @@ export default {
   },
   methods: {
     handleClickCity (city) {
-      this.$store.dispatch('changeCity', city)
+      this.changeCity(city)
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
   watch: {
     res () {
@@ -51,6 +53,11 @@ export default {
         this.scroll.scrollToElement(this.$refs[this.res][0])// 点击字母跳到相应的位置
       }
     }
+  },
+  computed: {
+    ...mapState({
+      currentCity: 'city'
+    })
   }
 }
 </script>
