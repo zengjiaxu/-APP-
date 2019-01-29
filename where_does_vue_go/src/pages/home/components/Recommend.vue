@@ -2,7 +2,7 @@
   <div class="recommend-content">
    <div class="font-title"><img class="img1" src="https://imgs.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="本周热门榜单"><span>猜你喜欢</span></div>
     <ul class="recommend-content-all">
-      <li class="recommend-content-one" v-for="item in list" :key="item.id">
+      <router-link :to="'/Detail/' + item.id" tag="li" class="recommend-content-one" v-for="item in list" :key="item.id">
         <div class="recommend-content-img">
           <img class="recommend-content-img-info" :src="item.url" alt="">
         </div>
@@ -24,7 +24,7 @@
             <p class="region-info">{{item.describe}}</p>
           </div>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
