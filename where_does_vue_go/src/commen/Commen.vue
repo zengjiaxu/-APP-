@@ -1,8 +1,11 @@
 <template>
-   <div class="commen">
+   <div class="commen" @click="handleClose">
      <div class="wrapper">
-        <swiper :options="swiperOption">
-          <swiper-slide v-for="(item,idx) of list" :key="idx"><img class="img-swiper" src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" ></swiper-slide>
+        <swiper :options='swiperOptions'>
+          <swiper-slide
+          v-for="(item,idx) of imgs"
+          :key="idx"
+          ><img class="commen-swiper" :src='item' ></swiper-slide>
           <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
      </div>
@@ -12,15 +15,35 @@
 <script type="text/ecmascript-6">
 export default {
   name: 'commen',
+  props: {
+    imgs: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
   data () {
     return {
-      list: [1, 2, 3]
+      swiperOptions: {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        observer: true, // 自我刷新，解决swiper宽度计算的问题
+        observeParents: true
+      }
+    }
+  },
+  methods: {
+    handleClose () {
+      this.$emit('close')
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+.commen >>> .swiper-container
+  overflow inherit
 .commen
   background #000
   position fixed
@@ -34,12 +57,13 @@ export default {
   z-index 99
   .wrapper
     background #ffffff
-    height 80vw
-    display flex
-    align-items center
-    .swiper-slide
-     display flex
-     align-items center
-     .img-swiper
-      width 100%
+    height 100vw
+    width 100vw
+    .commen-swiper
+      width 100vw
+      height 100vw
+    .swiper-pagination
+      color #ffffff
+      bottom -1rem
+      font-size .42rem
 </style>

@@ -1,25 +1,44 @@
 <template>
-   <div class="banner">
+  <div>
+    <div class="banner" @click="handleImg">
      <img src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" alt="">
       <div class="banner-info">
         <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
         <div class="banner-number banner-icon"><span class="iconfont banner-icon">&#xe658;</span>39</div>
       </div>
-      <commen/>
-   </div>
+    </div>
+   <commen :imgs="imgs" v-show="showCom" @close="handleComClose"/>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
 import commen from 'commen/Commen'
 export default {
   name: 'detailBanner',
+  data () {
+    return {
+      showCom: false,
+      imgs: ['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg',
+        'http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png']
+    }
+  },
   components: {
     commen
+  },
+  methods: {
+    handleImg () {
+      this.showCom = true
+      console.log(this.showCom)
+    },
+    handleComClose () {
+      this.showCom = false
+      console.log(this.showCom)
+    }
   }
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .banner
   width 100vw
   height 55vw
