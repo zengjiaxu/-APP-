@@ -43,8 +43,12 @@ export default {
     }
   },
   activated () {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll)// 页面展示的时候执行
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)// 页面消失的时候执行
   }
+
 }
 </script>
 
