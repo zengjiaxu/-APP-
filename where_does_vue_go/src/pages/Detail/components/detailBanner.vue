@@ -7,12 +7,15 @@
         <div class="banner-number banner-icon"><span class="iconfont banner-icon">&#xe658;</span>{{this.gallaryImgs.length}}</div>
       </div>
     </div>
+  <faded>
    <commen :imgs="gallaryImgs" v-show="showCom" @close="handleComClose"/>
+  </faded>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import commen from 'commen/Commen'
+import faded from 'commen/fade/fade'
 export default {
   name: 'detailBanner',
   props: {
@@ -26,7 +29,8 @@ export default {
     }
   },
   components: {
-    commen
+    commen,
+    faded
   },
   methods: {
     handleImg () {
