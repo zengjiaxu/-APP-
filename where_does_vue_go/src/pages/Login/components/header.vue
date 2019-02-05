@@ -18,7 +18,7 @@
        </div>
      </div>
      <div class="afrom">
-     <el-form label-width="70px" :model="formLabelAlign" :label-position="labelPosition">
+     <el-form label-width="60px" :model="formLabelAlign" :label-position="labelPosition">
         <el-form-item label="手机号">
           <el-input v-model="formLabelAlign.phoneNumber" placeholder="请输入手机号"></el-input>
         </el-form-item>
@@ -58,8 +58,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.afrom >>> .el-input__inner
-  border 1px solid #cccccc
 .afrom >>> .control-label
   color #19a9ba
 .login

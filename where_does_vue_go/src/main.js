@@ -11,6 +11,7 @@ import './assets/style/border.css'
 import './assets/style/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAweSwiper)
