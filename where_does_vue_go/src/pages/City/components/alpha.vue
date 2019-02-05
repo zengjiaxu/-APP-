@@ -6,7 +6,7 @@
        :key="i"
        :ref='i'
        @click="handle"
-       @touchstart="handletouchstart"
+       @touchstart.prevent="handletouchstart"
        @touchmove="handletouchmove"
        @touchend="handletouchend">{{i}}</li>
      </ul>
