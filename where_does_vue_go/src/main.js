@@ -10,14 +10,17 @@ import './assets/style/reset.css'
 import './assets/style/border.css'
 import './assets/style/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+import ElementUI from 'element-ui'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAweSwiper)
+Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  render: h => h(App)
 })
