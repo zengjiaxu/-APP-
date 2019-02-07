@@ -4,6 +4,7 @@ import Home from '@/pages/home/Home'
 import City from '../pages/City/city'
 import Detail from '../pages/Detail/detail'
 import Login from '../pages/Login/Login'
+import Register from '../pages/Register/Register'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -26,6 +27,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ],
   scrollBehavior (to, from, savedPosition) {
