@@ -19,7 +19,10 @@
      </div>
      <div class="aform">
        <div class="out" v-show="isActiveOne">
-        <el-form label-width="60px" :model="formLabelAlign" :label-position="labelPosition">
+        <el-form
+        label-width="60px"
+        :model="formLabelAlign"
+        :label-position="labelPosition">
             <el-form-item label="手机号" class="ko">
               <el-input v-model="formLabelAlign.phoneNumber" placeholder="请输入手机号"></el-input>
             </el-form-item>
@@ -31,10 +34,10 @@
        <div class="out" v-show="isActiveTwo">
         <el-form label-width="60px" :model="formLabelAlign" :label-position="labelPosition">
             <el-form-item label="账号" class="ko">
-              <el-input v-model="formLabelAlign.phoneNumber" placeholder="手机号/邮箱/用户名"></el-input>
+              <el-input v-model="formLabelAlign.username" placeholder="手机号/邮箱/用户名"></el-input>
             </el-form-item>
             <el-form-item label="密码">
-              <el-input v-model="formLabelAlign.yzm" placeholder="请输入密码"></el-input>
+              <el-input v-model="formLabelAlign.pass" placeholder="请输入密码"></el-input>
             </el-form-item>
           </el-form>
       </div>
@@ -58,8 +61,11 @@ export default {
       labelPosition: 'left',
       formLabelAlign: {
         phoneNumber: '',
-        yzm: ''
-      }
+        yzm: '',
+        username: '',
+        pass: ''
+      },
+      rules: ''
     }
   },
   methods: {
@@ -70,6 +76,17 @@ export default {
     toggleClassTwo () {
       this.isActiveTwo = true
       this.isActiveOne = false
+    }
+  },
+  watch: {
+    formLabelAlign: {
+      handler: function (val) {
+        console.log(val.phoneNumber)
+      },
+      deep: true
+    },
+    'formLabelAlign.yzm': function (val) {
+      console.log(val)
     }
   }
 }

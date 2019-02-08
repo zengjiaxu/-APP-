@@ -65,6 +65,9 @@ export default {
       border-bottom 1px solid #cacaca
       background #f3f3f3
       ul
+         overflow hidden
+         width 304px
+         margin 0 auto
          li
             width 76px
             line-height 39px
