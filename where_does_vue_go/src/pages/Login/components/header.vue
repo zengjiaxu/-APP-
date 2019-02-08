@@ -43,7 +43,7 @@
       </div>
      </div>
       <div class="myBtn">
-        <el-button type="primary">登录</el-button>
+        <el-button type="primary" :class="{trueColor:isTrueColor}" :disabled="isDisabled">登录</el-button>
       </div>
       <p>
         <router-link to="/">找回密码</router-link>
@@ -58,7 +58,9 @@ export default {
     return {
       isActiveOne: true,
       isActiveTwo: false,
+      isTrueColor: false,
       labelPosition: 'left',
+      isDisabled: true,
       formLabelAlign: {
         phoneNumber: '',
         yzm: '',
@@ -72,21 +74,42 @@ export default {
     toggleClassOne () {
       this.isActiveOne = true
       this.isActiveTwo = false
+      this.isDisabled = true
+      this.isTrueColor = false
+      if ((this.formLabelAlign.phoneNumber.length === 11 && this.formLabelAlign.yzm.length >= 4)) {
+        this.isTrueColor = true
+        this.isDisabled = false
+      } else {
+        this.isTrueColor = false
+        this.isDisabled = true
+      }
     },
     toggleClassTwo () {
       this.isActiveTwo = true
       this.isActiveOne = false
+      this.isDisabled = true
+      this.isTrueColor = false
+      if ((this.formLabelAlign.username.length > 0 && this.formLabelAlign.pass.length > 0)) {
+        this.isTrueColor = true
+        this.isDisabled = false
+      } else {
+        this.isTrueColor = false
+        this.isDisabled = true
+      }
     }
   },
   watch: {
     formLabelAlign: {
       handler: function (val) {
-        console.log(val.phoneNumber)
+        if ((val.phoneNumber.length === 11 && val.yzm.length >= 4) || (val.username.length > 0 && val.pass.length > 0)) {
+          this.isTrueColor = true
+          this.isDisabled = false
+        } else {
+          this.isTrueColor = false
+          this.isDisabled = true
+        }
       },
       deep: true
-    },
-    'formLabelAlign.yzm': function (val) {
-      console.log(val)
     }
   }
 }
@@ -111,6 +134,8 @@ export default {
   width 100%
   height 1rem
   font-size 18px
+.myBtn >>> .trueColor
+  background #18a9b9
 .login
   font-size .32rem
   background #f3f9fc
