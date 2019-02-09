@@ -26,8 +26,9 @@
             <el-form-item label="手机号" class="ko">
               <el-input v-model="formLabelAlign.phoneNumber" placeholder="请输入手机号"></el-input>
             </el-form-item>
-            <el-form-item label="验证码">
+            <el-form-item label="验证码" class="kk">
               <el-input v-model="formLabelAlign.yzm" placeholder="请输入验证码"></el-input>
+              <el-button size="medium" class="el-button-yzm">获取验证码</el-button>
             </el-form-item>
           </el-form>
       </div>
@@ -101,7 +102,7 @@ export default {
   watch: {
     formLabelAlign: {
       handler: function (val) {
-        if ((val.phoneNumber.length === 11 && val.yzm.length >= 4) || (val.username.length > 0 && val.pass.length > 0)) {
+        if ((val.phoneNumber.length === 11 && val.yzm.length === 6) || (val.username.length > 0 && val.pass.length > 0)) {
           this.isTrueColor = true
           this.isDisabled = false
         } else {
@@ -128,6 +129,8 @@ export default {
   border none
 .aform >>> .el-form
   margin 0 .2rem
+.aform >>> .kk
+  padding-right 2rem
 .myBtn >>> .el-button
   background #85d1db
   border none
@@ -136,6 +139,14 @@ export default {
   font-size 18px
 .myBtn >>> .trueColor
   background #18a9b9
+.aform >>> .el-button-yzm
+  width 2rem
+  height .7rem
+  position absolute
+  top 0
+  right -2rem
+  margin-bottom .2rem
+  text-align center
 .login
   font-size .32rem
   background #f3f9fc

@@ -16,7 +16,7 @@
     </el-form>
    </div>
     <div class="myBtn">
-      <el-button type="primary">注册</el-button>
+      <el-button type="primary" :class="{isColor: isTrueColor}" :disabled="isDisabled">注册</el-button>
     </div>
   </div>
 </template>
@@ -31,7 +31,23 @@ export default {
         txm: '',
         yzm: ''
       },
-      labelPosition: 'left'
+      labelPosition: 'left',
+      isTrueColor: false,
+      isDisabled: true
+    }
+  },
+  watch: {
+    formRegister: {
+      handler: function (val) {
+        if (val.phone.length === 11 && val.txm.length === 4 && val.yzm.length === 4) {
+          this.isTrueColor = true
+          this.isDisabled = false
+        } else {
+          this.isTrueColor = false
+          this.isDisabled = true
+        }
+      },
+      deep: true
     }
   }
 }
@@ -66,6 +82,8 @@ export default {
   width 100%
   height 1rem
   font-size 18px
+.myBtn >>> .isColor
+  background #18a9b9
 .form-detail
   border-top 1px solid #cccccc
   border-bottom 1px solid #cccccc
