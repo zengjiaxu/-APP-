@@ -38,13 +38,13 @@
               <el-input v-model="formLabelAlign.username" placeholder="手机号/邮箱/用户名"></el-input>
             </el-form-item>
             <el-form-item label="密码">
-              <el-input v-model="formLabelAlign.pass" placeholder="请输入密码"></el-input>
+              <el-input v-model="formLabelAlign.pass" placeholder="请输入密码" type="password"></el-input>
             </el-form-item>
           </el-form>
       </div>
      </div>
       <div class="myBtn">
-        <el-button type="primary" :class="{trueColor:isTrueColor}" :disabled="isDisabled">登录</el-button>
+        <el-button type="primary" :class="{trueColor:isTrueColor}" :disabled="isDisabled" @click="loginUser">登录</el-button>
       </div>
       <p>
         <router-link to="/">找回密码</router-link>
@@ -53,6 +53,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+import axios from 'axios'
 export default {
   name: 'Header',
   data () {
@@ -96,6 +97,28 @@ export default {
       } else {
         this.isTrueColor = false
         this.isDisabled = true
+      }
+    },
+    loginUser () {
+      axios.get('/static/mock/login.json').then(this.getInfo).catch((err) => {
+        console.log(err)
+      })
+    },
+    getInfo (res) {
+      res = res.data
+      if (res.ret === true && res.data) {
+        if (res.data.user === this.formLabelAlign.username && res.data.pass === this.formLabelAlign.pass) {
+          this.$router.push('/')
+          let d = new Date()
+          d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000)
+          let expires = 'expires=' + d.toGMTString()
+          document.cookie = `${res.data.user}=${res.data.pass};${expires}`
+        } else {
+          this.$alert('账号或密码错误', {
+            confirmButtonText: '确定',
+            center: true
+          })
+        }
       }
     }
   },

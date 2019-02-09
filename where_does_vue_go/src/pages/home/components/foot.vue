@@ -10,7 +10,7 @@
          </ul>
       </div>
       <div class="detail-info">
-         <ul>
+         <ul :class="{newWidth:newWidtho}">
             <router-link to="/login" tag="li" v-for="(item,idx) of msg" :key="idx">{{item}}</router-link>
          </ul>
       </div>
@@ -29,7 +29,18 @@ export default {
   name: 'Foot',
   data () {
     return {
-      msg: ['登录', '我的订单', '最近浏览', '关于我们']
+      msg: ['登录', '我的订单', '最近浏览', '关于我们'],
+      newWidtho: false
+    }
+  },
+  activated () {
+    let data = document.cookie
+    let arr = data.split('=')
+    if (arr.length === 2) {
+      let newArr = this.msg.slice(2)
+      newArr.unshift('个人中心')
+      this.msg = newArr
+      this.newWidtho = true
     }
   }
 }
@@ -92,4 +103,6 @@ export default {
       color #616161
       background #f3f3f3
       text-align center
+.newWidth
+ width 228px !important
 </style>
