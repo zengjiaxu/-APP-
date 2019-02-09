@@ -36,7 +36,7 @@ export default {
   activated () {
     let data = document.cookie
     let arr = data.split('=')
-    if (arr.length === 2) {
+    if (arr.length === 2 && this.msg.length === 4) {
       let newArr = this.msg.slice(2)
       newArr.unshift('个人中心')
       this.msg = newArr
