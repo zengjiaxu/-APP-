@@ -54,6 +54,7 @@
 
 <script type="text/ecmascript-6">
 import axios from 'axios'
+import CryptoJS from 'crypto-js'
 export default {
   name: 'Header',
   data () {
@@ -112,7 +113,13 @@ export default {
           let d = new Date()
           d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000)
           let expires = 'expires=' + d.toGMTString()
-          document.cookie = `${res.data.user}=${res.data.pass};${expires}`
+          let salt = CryptoJS.enc.Utf8.parse('salt')// 盐
+          let iter = 1000// 迭代次数
+          let newPass = CryptoJS.PBKDF2(res.data.user, salt,
+            { keySize: parseInt(4),
+              iterations: parseInt(iter) }
+          )
+          document.cookie = `${res.data.user}=${newPass};${expires}`
         } else {
           this.$alert('账号或密码错误', {
             confirmButtonText: '确定',
